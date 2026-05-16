@@ -30,4 +30,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-createApp(App).use(vuetify).use(analytics).mount('#app');
+createApp(App).use(vuetify).mount('#app');

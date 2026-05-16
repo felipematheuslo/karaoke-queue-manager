@@ -43,8 +43,12 @@ This project was engineered to demonstrate proficiency in modern front-end ecosy
 - **Vuetify 3 (Material Design):** The interface was built using the Vuetify design system, ensuring visual consistency, native accessibility (a11y), and rapid prototyping of rich components like Modals, Cards, and AppBars.
 
 ### 🔄 Back-End & Synchronization: Firebase
-- **Firebase Realtime Database:** The core of the system. It uses persistent WebSockets connections so any changes made by the admin (e.g., calling the next singer, closing the list) are reflected on all clients' screens in *milliseconds*, eliminating the need for polling or manual page reloads.
-- **Firebase Authentication:** Implements security layers and session persistence (`browserSessionPersistence`) to protect the administration dashboard from unauthorized access.
+- Firebase Realtime Database: The core of the system. It uses persistent WebSockets connections so any changes made by the admin (e.g., calling the next singer, closing the list) are reflected on all clients' screens in milliseconds, eliminating the need for polling or manual page reloads.
+- Firebase Authentication: Implements security layers and session persistence (browserSessionPersistence) to protect the administration dashboard from unauthorized access.
+
+### 📊 Real-Time Telemetry & Performance Counters
+- **Session Metrics:** The system implements a robust daily performance metric tracker (for Total submissions, Called, and Removed entries) organized under date-based paths (`YYYY-MM-DD`).
+- **Atomic Operations:** Operations use Firebase's atomic database `increment()` function, preventing race conditions and ensuring thread-safe, high-concurrency metric tracking.
 
 ---
 
@@ -72,6 +76,7 @@ When developing this application, the end-user experience was at the center of e
 - Global queue state control ("List Open" / "List Closed").
 - Complete CRUD management of queue participants.
 - Session history logging for sung tracks.
+- **Real-Time Telemetry:** Live counter updates capturing daily queue statistics (Active, Called, and Removed songs).
 
 ---
 
@@ -103,6 +108,7 @@ When developing this application, the end-user experience was at the center of e
    VUE_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
    VUE_APP_FIREBASE_APP_ID=your_app_id
    VUE_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
+   VUE_APP_FIREBASE_DATABASE_URL=your_database_url
    ```
 
 4. **Start the Development Server:**
