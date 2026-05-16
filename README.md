@@ -18,7 +18,7 @@ This platform delivers a **frictionless experience** for bar patrons and powerfu
 <br />
 
 <div align="center">
-  <img src="src/assets/screenshot.png" alt="Project Screenshot" width="800">
+  <img src="src/assets/screenshot.png" alt="Project Screenshot" width="600">
 </div>
 
 <br />
