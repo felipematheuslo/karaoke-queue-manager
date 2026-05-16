@@ -31,7 +31,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import * as adminFunctions from "@/utils/adminFunctions";
 import AdminGerenciarKaraokeCard from "@/components/AdminGerenciarKaraokeCard.vue";
 
-import logoEstabelecimento from "@/assets/karaoke/demo/demo-gestao.png"; // Banner do estabelecimento
+import logoEstabelecimento from "@/assets/demo/demo-gestao.png"; // Banner do estabelecimento
 
 export default {
   components: {

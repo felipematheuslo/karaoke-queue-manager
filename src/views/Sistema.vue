@@ -66,9 +66,9 @@
 <script>
 import SiteAppBar from "@/components/SiteAppBar.vue";
 import { useDisplay } from "vuetify";
-import sistema1Phone from "@/assets/karaoke/sistema-1-phone.png";
-import sistema2Phone from "@/assets/karaoke/sistema-2-phone.png";
-import sistema1Desktop from "@/assets/karaoke/sistema-1-desktop.png";
+import sistema1Phone from "@/assets/sistema-1-phone.png";
+import sistema2Phone from "@/assets/sistema-2-phone.png";
+import sistema1Desktop from "@/assets/sistema-1-desktop.png";
 
 export default {
   components: {

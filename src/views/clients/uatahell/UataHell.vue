@@ -39,7 +39,7 @@ import ClienteAvisoDadosPessoais from "@/components/ClienteAvisoDadosPessoais.vu
 import ClienteKaraokeListaCard from "@/components/ClienteKaraokeListaCard.vue";
 import SiteAppBar from "@/components/SiteAppBar.vue";
 
-import bannerEstabelecimento from "@/assets/karaoke/ms-cg-uatahell/uatahell-cover.jpg"; // Banner do estabelecimento
+import bannerEstabelecimento from "@/assets/ms-cg-uatahell/uatahell-cover.jpg"; // Banner do estabelecimento
 
 export default {
   components: {

@@ -141,7 +141,7 @@
             <v-col align="center" cols="12" class="pa-0">
               <v-img
                 width="500"
-                :src="require('@/assets/karaoke/ms-cg-pizzapub/pizza-pub-2.jpg')"
+                :src="require('@/assets/ms-cg-pizzapub/pizza-pub-2.jpg')"
                 alt="Pizza Pub"
               />
             </v-col>

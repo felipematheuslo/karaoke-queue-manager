@@ -212,7 +212,7 @@
             >
               <v-img
                 width="120"
-                :src="require('@/assets/karaoke/ms-cg-pizzapub/pizza-pub-1.jpg')"
+                :src="require('@/assets/ms-cg-pizzapub/pizza-pub-1.jpg')"
                 alt="Pizza Pub"
               />
             </v-col>

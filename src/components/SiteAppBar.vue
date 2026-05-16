@@ -53,8 +53,8 @@
 
 <script>
 import { useDisplay } from "vuetify";
-import logoLarge from "@/assets/karaoke/logo-large.png";
-import logoMedium from "@/assets/karaoke/logo-medium.png";
+import logoLarge from "@/assets/logo-large.png";
+import logoMedium from "@/assets/logo-medium.png";
 
 export default {
   data() {

@@ -15,6 +15,14 @@ The **Karaoke Queue Manager** is an application built to solve a classic usabili
 
 This platform delivers a **frictionless experience** for bar patrons and powerful control tools for administrators (KJs/DJs), all synchronized instantly across devices.
 
+<br />
+
+<div align="center">
+  <img src="src/assets/screenshot.png" alt="Project Screenshot" width="800">
+</div>
+
+<br />
+
 ---
 
 ## 💼 Business Value & Real-World Validation

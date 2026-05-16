@@ -40,10 +40,10 @@
 <script>
 import SiteAppBar from "@/components/SiteAppBar.vue";
 import { useDisplay } from "vuetify";
-import home1Phone from "@/assets/karaoke/home-1-phone.png";
-import home2Phone from "@/assets/karaoke/home-2-phone.png";
-import home1Desktop from "@/assets/karaoke/home-1-desktop.png";
-import home2Desktop from "@/assets/karaoke/home-2-desktop.png";
+import home1Phone from "@/assets/home-1-phone.png";
+import home2Phone from "@/assets/home-2-phone.png";
+import home1Desktop from "@/assets/home-1-desktop.png";
+import home2Desktop from "@/assets/home-2-desktop.png";
 
 export default {
   components: {

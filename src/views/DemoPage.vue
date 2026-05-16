@@ -40,7 +40,7 @@ import ClienteAvisoDadosPessoais from "@/components/ClienteAvisoDadosPessoais.vu
 import ClienteKaraokeListaCard from "@/components/ClienteKaraokeListaCard.vue";
 import SiteAppBar from "@/components/SiteAppBar.vue";
 
-import bannerEstabelecimento from "@/assets/karaoke/demo/demo-cliente.png"; // Banner do estabelecimento
+import bannerEstabelecimento from "@/assets/demo/demo-cliente.png"; // Banner do estabelecimento
 
 export default {
   components: {
