@@ -1,0 +1,34 @@
+# ── Dependências ──────────────────────────────────────────────
+node_modules/
+
+# ── Build ─────────────────────────────────────────────────────
+/dist/
+
+# ── Variáveis de ambiente ──────────────────────────────────────
+# Mantenha apenas o .env.example no repositório
+.env
+.env.local
+.env.*.local
+
+# ── Logs ──────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Cache e temporários ────────────────────────────────────────
+.cache/
+*.log
+
+# ── Editores e IDEs ───────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Sistema operacional ────────────────────────────────────────
+.DS_Store
+Thumbs.db
