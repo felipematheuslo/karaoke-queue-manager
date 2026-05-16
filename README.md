@@ -121,11 +121,3 @@ When developing this application, the end-user experience was at the center of e
    ```bash
    npm run build
    ```
-
----
-
-<br />
-
-<div align="center">
-  <i>Developed with a focus on scalability, usability, and high-performance front-end engineering.</i>
-</div>
