@@ -1,9 +1,7 @@
 <div align="center">
-  <img src="./public/icon_karaoke.ico" alt="Logo" width="80" height="80">
-
-  # Mexerico Karaokês - Gerenciador de Filas Real-Time
+  # Karaoke Queue Manager
   
-  **Uma solução moderna e escalável para revolucionar a experiência de karaokês, com foco em UI/UX e sincronização em tempo real.**
+  **A modern, scalable solution designed to revolutionize the karaoke experience with a strong focus on UI/UX and real-time synchronization.**
 
   [![Vue.js](https://img.shields.io/badge/Vue.js-3.X-4FC08D?style=for-the-badge&logo=vue.js)](https://vuejs.org/)
   [![Vuetify](https://img.shields.io/badge/Vuetify-3.X-1867C0?style=for-the-badge&logo=vuetify)](https://vuetifyjs.com/)
@@ -13,105 +11,109 @@
 
 <br />
 
-## 🚀 Visão Geral do Produto
+## 🚀 Product Overview
 
-O **Karaoke Queue Manager** é uma aplicação projetada para resolver um problema clássico de usabilidade em estabelecimentos de entretenimento: a desorganização das filas de karaokê (frequentemente feitas em papel ou planilhas estáticas). 
+The **Karaoke Queue Manager** is an application built to solve a classic usability problem in entertainment venues: the disorganization of karaoke queues (often managed with paper slips or static spreadsheets). 
 
-Esta plataforma oferece uma **experiência sem atritos (frictionless)** para os clientes do bar e ferramentas poderosas de controle para os administradores (KJs/DJs), tudo sincronizado instantaneamente.
+This platform delivers a **frictionless experience** for bar patrons and powerful control tools for administrators (KJs/DJs), all synchronized instantly across devices.
 
 ---
 
-## 🧠 Arquitetura e Decisões Técnicas (Tech Stack)
+## 💼 Business Value & Real-World Validation
 
-Este projeto foi desenhado demonstrando domínio em ecossistemas front-end modernos, arquitetura baseada em componentes e integração com Backend-as-a-Service (BaaS).
+This project goes beyond a simple portfolio piece. It was developed following a genuine product lifecycle:
+- **Market Research:** Conducted field research with local bar owners and KJs to understand their true pain points in managing high-volume karaoke nights.
+- **Product-Market Fit:** MVP testing was conducted directly with the public in real-world scenarios to validate usability and adherence.
+- **Commercial Success:** The product proved its value, resulting in actual B2B sales and active paying clients (local venues) who now rely on the platform to run their events smoothly.
+
+---
+
+## 🧠 Architecture and Technical Decisions (Tech Stack)
+
+This project was engineered to demonstrate proficiency in modern front-end ecosystems, component-based architecture, and Backend-as-a-Service (BaaS) integrations.
 
 ### ⚡ Front-End: Vue.js 3 & Vuetify
-- **Vue 3:** Utilização da moderna reatividade do Vue.js para manipular estados complexos de filas dinâmicas. O projeto emprega uma estrutura multi-page (MPA) configurada via `vue.config.js`, permitindo separar contextos (Home, Admin, Clientes) otimizando o carregamento (Code Splitting nativo).
-- **Vuetify 3 (Material Design):** A interface foi construída utilizando o sistema de design do Vuetify, garantindo consistência visual, acessibilidade (a11y) nativa e prototipagem rápida de componentes ricos, como Modais, Cards, e AppBars.
+- **Vue 3:** Leverages Vue's modern reactivity system to handle the complex state of dynamic queues. The project employs a Multi-Page Application (MPA) architecture configured via `vue.config.js`. This separates contexts (Home, Admin, Clients) and optimizes load times through native Code Splitting.
+- **Vuetify 3 (Material Design):** The interface was built using the Vuetify design system, ensuring visual consistency, native accessibility (a11y), and rapid prototyping of rich components like Modals, Cards, and AppBars.
 
-### 🔄 Back-End & Sincronização: Firebase
-- **Firebase Realtime Database:** O coração do sistema. Utilizado para criar conexões via WebSockets persistentes. Qualquer alteração feita pelo admin (avançar fila, fechar lista) reflete na interface de todos os clientes em *milissegundos*, sem a necessidade de _polling_ ou recarregamento manual da página.
-- **Firebase Authentication:** Implementação de camadas de segurança e persistência de sessão (`browserSessionPersistence`) para proteger o dashboard de administração.
-
----
-
-## 🎨 Destaques de UI/UX Engineering
-
-Ao desenvolver esta aplicação, a experiência do usuário esteve no centro de todas as decisões arquiteturais:
-
-1. **Frictionless Onboarding (Zero Login):** Clientes em um bar não querem criar senhas. A interface pública permite que o usuário adicione seu nome e música instantaneamente. A menor barreira de entrada possível para conversão.
-2. **Mobile-First Design:** Como 99% dos usuários acessam o sistema da mesa do bar usando smartphones, a interface foi projetada estritamente com foco em mobile. Botões grandes, áreas de toque otimizadas (Touch Targets) e fontes legíveis em ambientes de baixa luminosidade (Modo Escuro nativo).
-3. **Feedback Visual Imediato:** Quando o administrador "trava" a lista de espera (fechando inscrições temporariamente), o botão de envio no celular do cliente é desabilitado em tempo real, acompanhado de avisos visuais claros de estado.
-4. **Dashboard Administrativo Intuitivo:** Os administradores lidam com alto volume de dados rapidamente. A interface de Admin foi desenhada para ter comandos rápidos (1-click actions) para remover, chamar ou reposicionar clientes na fila.
+### 🔄 Back-End & Synchronization: Firebase
+- **Firebase Realtime Database:** The core of the system. It uses persistent WebSockets connections so any changes made by the admin (e.g., calling the next singer, closing the list) are reflected on all clients' screens in *milliseconds*, eliminating the need for polling or manual page reloads.
+- **Firebase Authentication:** Implements security layers and session persistence (`browserSessionPersistence`) to protect the administration dashboard from unauthorized access.
 
 ---
 
-## ✨ Funcionalidades do Sistema
+## 🎨 UI/UX Engineering Highlights
 
-### 📱 Experiência do Cliente (App Público)
-- Inserção rápida na fila de espera.
-- Visualização ao vivo do cantor atual.
-- Acompanhamento da própria posição na fila.
-- Bloqueio inteligente (escuta o estado da lista gerenciada pelo admin).
+When developing this application, the end-user experience was at the center of every architectural decision:
 
-### 🎛️ Dashboard Administrativo (Protected Route)
-- Autenticação segura de usuários gerenciais.
-- Controle do estado global da fila ("Lista Aberta" / "Lista Fechada").
-- Gestão CRUD completa dos participantes da fila.
-- Histórico de músicas da sessão.
+1. **Frictionless Onboarding (Zero Login):** Bar patrons don't want the hassle of creating accounts or passwords. The public interface allows users to add their name and song choice instantly—the lowest possible barrier to entry for higher conversion rates.
+2. **Mobile-First Design:** Recognizing that 99% of users access the system from their tables using smartphones, the interface was strictly designed with a mobile-first approach. It features large touch targets, thumb-friendly buttons, and highly readable fonts optimized for low-light environments (native Dark Mode).
+3. **Immediate Visual Feedback:** When the administrator "locks" the waiting list (temporarily closing sign-ups), the submission button on the client's phone is disabled in real-time, accompanied by clear visual state indicators.
+4. **Intuitive Admin Dashboard:** Administrators process a high volume of data quickly. The Admin UI is designed for speed, featuring 1-click actions to remove, call, or reposition clients in the queue.
 
 ---
 
-## 💻 Como Rodar o Projeto Localmente
+## ✨ System Features
 
-### Pré-requisitos
-- Node.js (v16+) e NPM instalados.
+### 📱 Client Experience (Public App)
+- Quick and seamless queue insertion.
+- Live view of the current singer on stage.
+- Real-time tracking of personal position in the queue.
+- Smart locking mechanism (listens dynamically to the admin's list state).
 
-### Passos para Instalação
+### 🎛️ Admin Dashboard (Protected Route)
+- Secure authentication for management users.
+- Global queue state control ("List Open" / "List Closed").
+- Complete CRUD management of queue participants.
+- Session history logging for sung tracks.
 
-1. **Clone o repositório:**
+---
+
+## 💻 Running the Project Locally
+
+### Prerequisites
+- Node.js (v16+) and NPM installed.
+
+### Installation Steps
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/seu-usuario/karaoke-queue-manager.git
+   git clone https://github.com/your-username/karaoke-queue-manager.git
    cd karaoke-queue-manager
    ```
 
-2. **Instale as dependências:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Configuração de Ambiente (Firebase):**
-   Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
+3. **Environment Setup (Firebase):**
+   Create a `.env` file in the project root based on `.env.example`:
    ```env
-   VUE_APP_FIREBASE_API_KEY=sua_api_key
-   VUE_APP_FIREBASE_AUTH_DOMAIN=seu_auth_domain
-   VUE_APP_FIREBASE_PROJECT_ID=seu_project_id
-   VUE_APP_FIREBASE_STORAGE_BUCKET=seu_storage_bucket
-   VUE_APP_FIREBASE_MESSAGING_SENDER_ID=seu_sender_id
-   VUE_APP_FIREBASE_APP_ID=seu_app_id
-   VUE_APP_FIREBASE_MEASUREMENT_ID=seu_measurement_id
+   VUE_APP_FIREBASE_API_KEY=your_api_key
+   VUE_APP_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   VUE_APP_FIREBASE_PROJECT_ID=your_project_id
+   VUE_APP_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   VUE_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VUE_APP_FIREBASE_APP_ID=your_app_id
+   VUE_APP_FIREBASE_MEASUREMENT_ID=your_measurement_id
    ```
 
-4. **Inicie o Servidor de Desenvolvimento:**
+4. **Start the Development Server:**
    ```bash
    npm run serve
    ```
-   > Acesse `http://localhost:8080/`. O projeto suporta *Hot-Module Replacement* (HMR).
+   > Access the app at `http://localhost:8080/`. The project supports *Hot-Module Replacement* (HMR).
 
-5. **Build de Produção:**
+5. **Production Build:**
    ```bash
    npm run build
    ```
 
 ---
 
-## 📩 Contato e Suporte Comercial
-
-Esta aplicação atende ao **Mexerico Karaokês**. Para dúvidas, suporte ou propostas:
-- 📱 WhatsApp: (11) 91246-0542
-
 <br />
 
 <div align="center">
-  <i>Desenvolvido com foco em escalabilidade, usabilidade e alta performance front-end.</i>
+  <i>Developed with a focus on scalability, usability, and high-performance front-end engineering.</i>
 </div>
