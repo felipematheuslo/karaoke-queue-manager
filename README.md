@@ -1,5 +1,5 @@
-<div align="center">
   # Karaoke Queue Manager
+  <div align="center">
   
   **A modern, scalable solution designed to revolutionize the karaoke experience with a strong focus on UI/UX and real-time synchronization.**
 
@@ -8,8 +8,6 @@
   [![Firebase](https://img.shields.io/badge/Firebase-Realtime%20Database-FFCA28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
   [![UX/UI](https://img.shields.io/badge/UX%2FUI-Mobile--First-8A2BE2?style=for-the-badge)]()
 </div>
-
-<br />
 
 ## 🚀 Product Overview
 
