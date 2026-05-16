@@ -18,14 +18,14 @@ const vuetify = createVuetify({
 import {initializeApp} from 'firebase/app';
 import {getAnalytics} from 'firebase/analytics';
 const firebaseConfig = {
-  apiKey: 'AIzaSyCc1A8bWAwqsymOwYJ3t7TSMmwpVSesYoo',
-  authDomain: 'karaoke-list-fa659.firebaseapp.com',
-  projectId: 'karaoke-list-fa659',
-  storageBucket: 'karaoke-list-fa659.appspot.com',
-  messagingSenderId: '1078852115153',
-  appId: '1:1078852115153:web:755cad25a570e1311cc3f0',
-  measurementId: 'G-JYD6CWCQJK',
-  databaseURL: 'https://karaoke-list-fa659-default-rtdb.firebaseio.com',
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
+  measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENT_ID,
+  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

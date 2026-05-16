@@ -28,17 +28,9 @@
       <v-col cols="12" class="text-center ma-0 pa-0">
         <h1 class="my-14 mx-10">A praticidade em suas mãos</h1>
         <h2 class="my-4">Fale conosco:</h2>
-        <h3 class="mb-0" @click="sendWhatsapp">
+        <h3 class="mb-8" @click="sendWhatsapp">
           <v-icon class="mb-1">mdi-whatsapp</v-icon>
           (11) 91246-0542
-        </h3>
-        <h3 class="mb-0" @click="sendInstagram">
-          <v-icon class="mb-0">mdi-instagram</v-icon>
-          @mexerico.top
-        </h3>
-        <h3 class="mb-8" @click="sendEmail">
-          <v-icon class="mb-1">mdi-email</v-icon>
-          Email: contato@mexerico.top
         </h3>
       </v-col>
     </v-row>
@@ -71,13 +63,7 @@ export default {
     this.display = useDisplay();
   },
   methods: {
-    sendEmail() {
-      window.location.href =
-        "mailto:contato@mexerico.top?subject=Quero%20conhecer%20o%20Mexerico%20Karaok%C3%AAs";
-    },
-    sendInstagram() {
-      window.location.href = "https://instagram.com/mexerico.top";
-    },
+
     sendWhatsapp() {
       window.location.href = `https://wa.me/5511912460542?text=${encodeURIComponent(
         "Olá, gostaria de conhecer o Mexerico Karaokês."

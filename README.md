@@ -109,8 +109,6 @@ Ao desenvolver esta aplicação, a experiência do usuário esteve no centro de 
 
 Esta aplicação atende ao **Mexerico Karaokês**. Para dúvidas, suporte ou propostas:
 - 📱 WhatsApp: (11) 91246-0542
-- 📸 Instagram: [@mexerico.top](https://instagram.com/mexerico.top)
-- ✉️ Email: contato@mexerico.top
 
 <br />
 
