@@ -9,7 +9,7 @@
   [![UX/UI](https://img.shields.io/badge/UX%2FUI-Mobile--First-8A2BE2?style=for-the-badge)]()
 </div>
 
-## 🚀 Product Overview
+## Product Overview
 
 The **Karaoke Queue Manager** is an application built to solve a classic usability problem in entertainment venues: the disorganization of karaoke queues (often managed with paper slips or static spreadsheets). 
 
@@ -23,36 +23,30 @@ This platform delivers a **frictionless experience** for bar patrons and powerfu
 
 <br />
 
----
-
-## 💼 Business Value & Real-World Validation
+## Business Value & Real-World Validation
 
 This project goes beyond a simple portfolio piece. It was developed following a genuine product lifecycle:
 - **Market Research:** Conducted field research with local bar owners and KJs to understand their true pain points in managing high-volume karaoke nights.
 - **Product-Market Fit:** MVP testing was conducted directly with the public in real-world scenarios to validate usability and adherence.
 - **Commercial Success:** The product proved its value, resulting in actual B2B sales and active paying clients (local venues) who now rely on the platform to run their events smoothly.
 
----
-
-## 🧠 Architecture and Technical Decisions (Tech Stack)
+## Architecture and Technical Decisions (Tech Stack)
 
 This project was engineered to demonstrate proficiency in modern front-end ecosystems, component-based architecture, and Backend-as-a-Service (BaaS) integrations.
 
-### ⚡ Front-End: Vue.js 3 & Vuetify
+### Front-End: Vue.js 3 & Vuetify
 - **Vue 3:** Leverages Vue's modern reactivity system to handle the complex state of dynamic queues. The project employs a Multi-Page Application (MPA) architecture configured via `vue.config.js`. This separates contexts (Home, Admin, Clients) and optimizes load times through native Code Splitting.
 - **Vuetify 3 (Material Design):** The interface was built using the Vuetify design system, ensuring visual consistency, native accessibility (a11y), and rapid prototyping of rich components like Modals, Cards, and AppBars.
 
-### 🔄 Back-End & Synchronization: Firebase
+### Back-End & Synchronization: Firebase
 - Firebase Realtime Database: The core of the system. It uses persistent WebSockets connections so any changes made by the admin (e.g., calling the next singer, closing the list) are reflected on all clients' screens in milliseconds, eliminating the need for polling or manual page reloads.
 - Firebase Authentication: Implements security layers and session persistence (browserSessionPersistence) to protect the administration dashboard from unauthorized access.
 
-### 📊 Real-Time Telemetry & Performance Counters
+### Real-Time Telemetry & Performance Counters
 - **Session Metrics:** The system implements a robust daily performance metric tracker (for Total submissions, Called, and Removed entries) organized under date-based paths (`YYYY-MM-DD`).
 - **Atomic Operations:** Operations use Firebase's atomic database `increment()` function, preventing race conditions and ensuring thread-safe, high-concurrency metric tracking.
 
----
-
-## 🎨 UI/UX Engineering Highlights
+## UI/UX Engineering
 
 When developing this application, the end-user experience was at the center of every architectural decision:
 
@@ -61,26 +55,22 @@ When developing this application, the end-user experience was at the center of e
 3. **Immediate Visual Feedback:** When the administrator "locks" the waiting list (temporarily closing sign-ups), the submission button on the client's phone is disabled in real-time, accompanied by clear visual state indicators.
 4. **Intuitive Admin Dashboard:** Administrators process a high volume of data quickly. The Admin UI is designed for speed, featuring 1-click actions to remove, call, or reposition clients in the queue.
 
----
+## System Features
 
-## ✨ System Features
-
-### 📱 Client Experience (Public App)
+### Client Experience (Public App)
 - Quick and seamless queue insertion.
 - Live view of the current singer on stage.
 - Real-time tracking of personal position in the queue.
 - Smart locking mechanism (listens dynamically to the admin's list state).
 
-### 🎛️ Admin Dashboard (Protected Route)
+### Admin Dashboard (Protected Route)
 - Secure authentication for management users.
 - Global queue state control ("List Open" / "List Closed").
 - Complete CRUD management of queue participants.
 - Session history logging for sung tracks.
 - **Real-Time Telemetry:** Live counter updates capturing daily queue statistics (Active, Called, and Removed songs).
 
----
-
-## 💻 Running the Project Locally
+## Running the Project Locally
 
 ### Prerequisites
 - Node.js (v16+) and NPM installed.
